@@ -1,0 +1,743 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontSecondary) !important;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+:root {
+  --colorPrimary: #e1dfd1;
+  --colorButton: #382c1e;
+  --colorDetails: #efb810;
+  --colorDetails2: #a0873c;
+  --fontTitleSection:'Great Vibes', cursive;
+  --fontPrimary: "Montserrat", sans-serif;
+  /* --fontSecondary: 'Charm', cursive; */
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontTitleSection) !important;
+}
+.menuDesplegable {
+  background-color: var(--colorPrimary);
+  border-top: 5px;
+  padding: 5px;
+  margin-right: 5px;
+}
+/* Header */
+.navDisposition {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navColor {
+  background-color: var(--colorPrimary) !important;
+}
+.navFontHeader {
+  font-family: var(--fontTitleSection) !important;
+  color: var(--colorButton) !important;
+  text-decoration: none;
+  font-size: 50px;
+}
+.navSubFontHeader {
+  font-family: var(--fontTitleSection) !important;
+  color: var(--colorButton) !important;
+  font-size: 30px;
+}
+.logoHeader{
+  width: 80px;
+}
+.liHeader{
+  font-family: var(--fontTitleSection) !important;
+  font-size: 35px;
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+
+.liHeader::after{
+  content: '';
+  position: absolute;
+  width: 0; /* Ancho inicial del subrayado */
+  height: 2px; /* Altura del subrayado */
+  bottom: 0; /* Posición bajo el texto */
+  left: 0%; /* Centra el subrayado respecto al texto */
+  background-color: black; /* Color del subrayado */
+  transition: width 0.5s ease, left 0.5s ease; /* Efecto de transición */
+    }
+  .liHeader:hover::after {
+    width: 100%; /* Expande el subrayado al 100% del ancho del texto */
+    left: 0; /* Ajusta la posición para que inicie desde el borde izquierdo */
+  }
+  .navbar-toggler{
+    color:rgba(250, 249, 249, 0) !important; ;
+    border-color: rgba(250, 249, 249, 0) !important;
+  }
+  .logoLink{
+    margin: auto 0;
+    text-align: center;
+  }
+  .logo{
+    width: 50% !important;
+  }
+/* Footer */
+footer {
+  padding: 25px;
+  border-top: 1px solid var(--colorButton);
+
+}
+.navFont {
+  font-family: var(--fontTitleSection) !important;
+  color: var(--colorButton) !important;
+  text-decoration: none;
+  font-size: 70px;
+  margin: auto 0;
+}
+.footerArticle{
+  background-color: var(--colorPrimary);
+  z-index: 1000 !important;
+}
+.apartadosFooter{
+  font-family: var(--fontPrimary) !important;
+  font-size: 25px;
+  margin-top: 9px;
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+}
+
+.apartadosFooter::after{
+  content: '';
+  position: absolute;
+  width: 0; /* Ancho inicial del subrayado */
+  height: 2px; /* Altura del subrayado */
+  bottom: 0; /* Posición bajo el texto */
+  left: 0%; /* Centra el subrayado respecto al texto */
+  background-color: black; /* Color del subrayado */
+  transition: width 0.5s ease, left 0.5s ease; /* Efecto de transición */
+    }
+  .apartadosFooter:hover::after {
+    width: 100%; /* Expande el subrayado al 100% del ancho del texto */
+    left: 0; /* Ajusta la posición para que inicie desde el borde izquierdo */
+  }
+.buttonNewsletter {
+  background-color: var(--colorButton);
+  text-decoration: none;
+  color: var(--colorPrimary);
+  padding: 5px;
+  text-align: center;
+  margin: auto 0;
+  margin-top: 15px;
+  font-family: var(--fontPrimary) !important;
+  border-radius: 0px;
+  font-weight: 600;
+}
+.buttonNewsletter:hover {
+  color: var(--colorButton);
+  background-color: var(--colorDetails2);
+  transition: ease-in-out 0.2s;
+}
+/* Home */
+.fotoBackground {
+  background-image: url("../images/portada.jpg");
+  background-size: cover; /* Cubrir todo el div */
+
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  transition:ease-in-out .9s;
+}
+.fotoPortada {
+  width: 100%;
+}
+.imagen-scroll{
+  filter: grayscale(80%);
+  transition:ease-in-out .9s
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  gap: 10px; /* Espacio entre las celdas */
+  width: 100%; /* Ajusta este valor según necesites */
+  margin: auto; /* Centrar el grid en la página */
+}
+
+.grid-item img {
+  width: 100%; /* Hace que las imágenes ocupen todo el ancho de su contenedor */
+  height: 500px; /* Mantiene la proporción de las imágenes */
+}
+
+.grid-item {
+  width: 100%;
+  height: auto; 
+}
+
+
+.card {
+  border: none;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--colorButton);
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev span,
+.carousel-control-next span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.cards-wrapper {
+  display: flex;
+}
+.card {
+  margin: 0 0.5em;
+  width: calc(100% / 2);
+}
+.image-wrapper {
+  height: 20vw;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.textOpinion{
+ font-family: var(--fontPrimary)  !important;
+ font-weight: bold;
+}
+
+.item-3 {
+  grid-column: 1 / -1; /* Hace que el elemento ocupe todas las columnas disponibles */
+}
+.textoFotoPortada{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+  font-size: 100px !important;
+  transition:ease-in-out .9s;
+  font-family: var(--fontTitleSection) !important;
+  background-color: #a0873c7e;
+}
+.second-text-portada{
+  font-size: 70px !important;
+}
+.texto-visible {
+  display: block;
+}
+
+.secondArticle {
+  margin-top: 15px;
+}
+.imagenOptions{
+  position: relative;
+  overflow: hidden;
+}
+.nomSeccion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF; 
+  display: none;
+  z-index: 2; 
+  text-align: center;
+  font-family: var(--fontTitleSection) !important;
+  font-weight: 700;
+  margin-top: 5px;
+  color: var(--colorPrimary);
+  text-decoration: none;
+  font-size: 80px !important;
+}
+
+.imagenOptions:hover .nomSeccion {
+  display: block; 
+}
+
+.imagenOptions:hover img {
+  filter: brightness(10%);
+}
+.imagenOptions img {
+  transition: filter 0.5s ease; /* Suaviza el cambio de brillo */
+}
+.imagenImportantSection{
+  position: relative;
+  overflow: hidden;
+}
+.nomSeccion {
+  transition: display 0.5s ease; /* Intenta suavizar la aparición del texto, aunque 'display' no es animable */
+}
+
+.tercerArticle {
+  background-color: var(--colorPrimary);
+}
+.btnInstagram {
+  background-color: var(--colorButton);
+  text-decoration: none;
+  color: var(--colorPrimary);
+  text-align: center;
+  margin: auto 0;
+  font-family: var(--fontPrimary) !important;
+  font-size: 30px !important;
+  padding: 10px;
+}
+.btnInstagram:hover {
+  color: var(--colorButton);
+  background-color: var(--colorDetails2);
+  transition: ease-in-out 0.2s;
+}
+.titleRrss {
+  font-family: var(--fontPrimary) !important;
+  margin-top: 5px;
+  color: var(--colorButton);
+  text-decoration: none;
+  font-size: 50px !important;
+}
+ul {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+li > a {
+  color: var(--colorButton) !important;
+  text-decoration: none;
+}
+.title-reciclaje{
+ font-weight: 400;
+  font-size: 80px !important;
+  text-align: center !important;
+  padding: 10px;
+}
+
+/*Contacto*/
+input {
+  background-color: var(--colorPrimary) !important;
+  padding: 8px;
+  margin-top: 25px;
+  font-family: var(--fontPrimary) !important;
+}
+.textareaContact {
+  background-color: var(--colorPrimary) !important;
+  margin-top: 25px;
+}
+.buttonContact {
+  padding: 8px;
+  background-color: var(--colorButton) !important;
+  color: var(--colorPrimary) !important;
+  font-family: var(--fontPrimary) !important;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px !important;
+}
+.buttonContact:hover {
+  color: var(--colorButton) !important;
+  background-color: var(--colorDetails2) !important;
+  transition: ease-in-out 0.2s;
+}
+.infoContact {
+  padding: 8px;
+  color: var(--colorButton) !important;
+  font-family: var(--fontPrimary) !important;
+  text-align: start;
+}
+.titleContact{
+  font-size: 50px !important;
+}
+
+.imagenPerfil{
+  width: 50%;
+  height: 100%;
+}
+.textPerfil{
+  font-size:  22px !important;
+  font-family: var(--fontPrimary) !important;
+text-align: start;
+  transition: ease-in-out .5s;
+  padding: 10px;
+  font-weight: bold !important;
+}
+.textPerfil:hover{
+  background-color: var(--colorPrimary);
+  cursor: text;
+  padding: 10px;
+
+}
+/*Contacto*/
+
+.fotoBackgroundReciclaje{
+  background-image: url("../images/reciclaje.jpg");
+  background-size: cover; /* Cubrir todo el div */
+  background-position: center; /* Centrar la imagen */
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  transition:ease-in-out .9s;
+}
+.fotoBackgroundNovia{
+  background-image: url("../images/portadaNovia.jpg");
+  background-size: cover; /* Cubrir todo el div */
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  transition:ease-in-out .9s;
+}
+.textDescription{
+  text-align: start;
+  margin: auto 0;
+  font-size:  26px !important;
+  font-family: var(--fontPrimary) !important;
+  font-weight: bold !important;
+  transition: ease-in-out .5s;
+}
+.textDescription:nth-child(2){
+  text-align: end;
+}
+
+.textDescription:hover{
+  background-color: var(--colorPrimary);
+  cursor: text;
+}
+
+/* .titleSectionSticky {
+  position: sticky;
+  top: 0;
+
+} */
+.titleGallery{
+  padding: 5px;
+  text-align: center;
+  background-color: var(--colorPrimary) !important;
+  font-size: 50px !important;
+}
+.infoGallery{
+  text-align: start;
+  font-family: var(--fontPrimary) !important;
+  margin-left: 10px;
+  font-size: 18px !important;
+  font-weight: bold;
+  background-color: var(--colorButton) !important;
+  color: var(--colorPrimary) !important;
+  width: 30%;
+  padding: 10px;
+  transition: ease-in-out .5s;
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+.infoGallery:hover{
+  background-color: var(--colorDetails2) !important;
+  color: var(--colorButton) !important;
+}
+.modal-content{
+  margin: auto !important;
+  width: 70% !important;
+}
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Asegura que los elementos se alineen en la parte superior */
+}
+
+.galeria-imagenes .div-img {
+  width: calc(33.333% - 4px);
+  margin: 0 2px;
+}
+
+.fotosHome {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  margin: 2px;
+  padding: 5px;
+}
+.fotosHomeSquare {
+  width: 100%;
+  height: 1100px;
+  object-fit: cover;
+  margin: 2px;
+  padding: 5px;
+}
+.fotosHomeNovia{
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  margin: 2px;
+  padding: 5px;
+}
+
+.btnContacto{
+  background-color: var(--colorButton);
+  text-decoration: none;
+  color: var(--colorPrimary);
+  text-align: center;
+  margin: auto 0;
+  font-family: var(--fontPrimary) !important;
+  font-size: 30px !important;
+  padding: 10px;
+}
+.btnContacto:hover {
+  color: var(--colorButton);
+  background-color: var(--colorDetails2);
+  transition: ease-in-out 0.2s;
+}
+.custom-select {
+  width: 100%;
+  font-family: var(--fontPrimary) !important;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--colorPrimary);
+  background-color: var(--colorButton);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+@media (max-width: 450px) {
+  .logo{
+    width: 100% !important;
+  }
+  .logoHeader{
+    width: 50px;
+  }
+  .logoFooter{
+    width: 100% !important;
+  }
+  .nomSeccion {
+    font-size: 40px !important;
+  }
+  .textOpinion{
+    font-size: 10px !important;
+    font-weight: bold;
+   }
+  .titleRrss {
+    font-size: 20px !important;
+  }
+  .carousel-control-prev,
+.carousel-control-next {
+  width: 3vh;
+  height: 3vh;
+
+}
+  .textButton {
+    font-size: 20px !important;
+    padding: 10px;
+  }
+  .btnInstagram {
+    padding: 0px;
+  }
+  .tercerArticle {
+    padding: 10px;
+  }
+  .fotoBackground {
+    background-image: url("../images/novia_cuadro.jpg");
+    background-position: center;
+  }
+  .textoFotoPortada{
+    font-size: 55px !important;
+  }
+  .second-text-portada{
+    font-size: 40px !important;
+  }
+  .galeria-imagenes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+  }
+  .imagenOptions{
+    position: relative;
+    overflow: hidden;
+  }
+  .nomSeccion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF; 
+    display: block;
+    z-index: 2; 
+    text-align: center;
+  } 
+  .imagenOptions:hover img {
+    filter: brightness(50%);
+  }
+  .imagenOptions img {
+    filter: brightness(50%);
+  }
+  .galeria-imagenes .div-img {
+    width: calc(100% - 4px);
+  }
+  .card:not(:first-child) {
+    display: none;
+  }
+  .textDescription{
+    text-align: start;
+    margin: 10px;
+    font-size:  18px !important;
+    font-family: var(--fontPrimary) !important;
+    font-weight: bold !important;
+  }
+  .infoGallery{
+    font-size: 12px !important;
+    width: 99%;
+    margin: auto;
+  }
+  .modal-content{
+    margin: 150px 50px !important;
+    width: 70% !important;
+  }
+  /*Contacto*/
+  .btnContacto {
+    text-align: center;
+    margin: 10px auto;
+  }
+  .imagenPerfil{
+    width: 100%;
+    height: 100%;
+  }
+  .textPerfil{
+  font-size:  20px !important;
+  text-align: justify;
+  font-weight: bold !important;
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    width: 90%; /* Las imágenes ocuparán el 90% del ancho disponible */
+}
+.fotosHome {
+  height: 600px;
+}
+.title-reciclaje{
+  font-weight: 400;
+   font-size: 50px !important;
+   text-align: center !important;
+   padding: 10px;
+ }
+}
+@media (min-width: 451px) and (max-width: 1080px) {
+  .logo{
+    width: 50% !important;
+  }
+  .logoFooter{
+    width: 70% !important;
+  }
+  .nomSeccion {
+    font-size: 50px !important;
+  }
+  .titleRrss {
+    font-size: 20px !important;
+  }
+  .textButton {
+    font-size: 20px !important;
+    padding: 10px;
+  }
+  .btnInstagram {
+    padding: 0px;
+  }
+  .fotoBackground {
+    background-image: url("../images/novia_cuadro.jpg");
+ /* Ajusta la altura según tus necesidades */
+  }
+  .second-text-portada{
+    font-size: 40px !important;
+  }
+  .textoFotoPortada{
+    font-size: 60px !important;
+  }
+  .textDescription{
+    text-align: start;
+    margin: 10px;
+    font-size:  20px !important;
+
+  }
+  .btnContacto {
+    text-align: center;
+    margin: 10px auto;
+  }
+  .imagenPerfil{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .divImagenPerfil{
+    height: 350px;
+    margin: 0 auto;
+  }
+  .textPerfil{
+    font-size:  20px !important;
+    text-align: justify;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 90%; 
+}
+.galeria-contenedor {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0; /* Ajusta según necesites que se "pegue" al hacer scroll */
+  height: calc(100vh - 20px); /* Ajusta la altura del contenedor visible en pantalla */
+  overflow-y: auto; /* Habilita el desplazamiento vertical dentro del contenedor */
+  padding: 10px; /* Opcional: para un poco de espacio interior */
+}
+
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.galeria-imagenes .div-img {
+  width: calc(50% - 4px);
+  margin: 0 2px;
+}
+
+.fotosHome {
+  height: 800px;
+}
+.div-img:nth-last-child(9){
+  display: none;
+}
+}
+@media (min-width: 1081px) and (max-width: 1400px) {
+  .logo{
+    width: 40% !important;
+  }
+  .logoFooter{
+    width: 70% !important;
+  }
+  .textDescription{
+    font-size:  18px !important;
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    width: 90%; /* Las imágenes ocuparán el 90% del ancho disponible */
+}
+.imagenPerfil{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+  }

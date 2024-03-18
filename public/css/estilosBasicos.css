@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontSecondary) !important;
+  
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  :root {
+    --colorPrimary: #e1dfd1;
+    --colorButton: #382c1e;
+    --colorDetails: #efb810;
+    --colorDetails2: #a0873c;
+    --fontTitleSection:'Great Vibes', cursive;
+    --fontPrimary: "Montserrat", sans-serif;
+    /* --fontSecondary: 'Charm', cursive; */
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--fontTitleSection) !important;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontSecondary) !important;
+  
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  :root {
+    --colorPrimary: #e1dfd1;
+    --colorButton: #382c1e;
+    --colorDetails: #efb810;
+    --colorDetails2: #a0873c;
+    --fontTitleSection:'Great Vibes', cursive;
+    --fontPrimary: "Montserrat", sans-serif;
+    /* --fontSecondary: 'Charm', cursive; */
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--fontTitleSection) !important;
+  }
+  .menuDesplegable {
+    background-color: var(--colorPrimary);
+    border-top: 5px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  /* Header */
+  .navDisposition {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navColor {
+    background-color: var(--colorPrimary) !important;
+  }
+  .navFontHeader {
+    font-family: var(--fontTitleSection) !important;
+    color: var(--colorButton) !important;
+    text-decoration: none;
+    font-size: 50px;
+  }
+  .navSubFontHeader {
+    font-family: var(--fontTitleSection) !important;
+    color: var(--colorButton) !important;
+    font-size: 30px;
+  }
+  .logoHeader{
+    width: 100px;
+  }
+  .liHeader{
+    font-family: var(--fontTitleSection) !important;
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .liHeader::after{
+    content: '';
+    position: absolute;
+    width: 0; /* Ancho inicial del subrayado */
+    height: 2px; /* Altura del subrayado */
+    bottom: 0; /* Posición bajo el texto */
+    left: 0%; /* Centra el subrayado respecto al texto */
+    background-color: black; /* Color del subrayado */
+    transition: width 0.5s ease, left 0.5s ease; /* Efecto de transición */
+      }
+    .liHeader:hover::after {
+      width: 100%; /* Expande el subrayado al 100% del ancho del texto */
+      left: 0; /* Ajusta la posición para que inicie desde el borde izquierdo */
+    }
+    .navbar-toggler{
+      color:rgba(250, 249, 249, 0) !important; ;
+      border-color: rgba(250, 249, 249, 0) !important;
+    }
+    .logoLink{
+      margin: auto 0;
+      text-align: center;
+    }
+    .logo{
+      width: 50% !important;
+    }
+  /* Footer */
+  footer {
+    padding: 25px;
+    border-top: 1px solid var(--colorButton);
+  
+  }
+  .logo{
+    width: 70% !important;
+  }
+  .navFont {
+    font-family: var(--fontTitleSection) !important;
+    color: var(--colorButton) !important;
+    text-decoration: none;
+    font-size: 70px;
+    margin: auto 0;
+  }
+  .footerArticle{
+    background-color: var(--colorPrimary);
+    z-index: 1000 !important;
+  }
+  .apartadosFooter{
+    font-family: var(--fontPrimary) !important;
+    font-size: 25px;
+    margin-top: 9px;
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .apartadosFooter::after{
+    content: '';
+    position: absolute;
+    width: 0; /* Ancho inicial del subrayado */
+    height: 2px; /* Altura del subrayado */
+    bottom: 0; /* Posición bajo el texto */
+    left: 0%; /* Centra el subrayado respecto al texto */
+    background-color: black; /* Color del subrayado */
+    transition: width 0.5s ease, left 0.5s ease; /* Efecto de transición */
+      }
+    .apartadosFooter:hover::after {
+      width: 100%; /* Expande el subrayado al 100% del ancho del texto */
+      left: 0; /* Ajusta la posición para que inicie desde el borde izquierdo */
+    }
